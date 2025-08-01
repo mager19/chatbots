@@ -7,8 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-cyan-500: oklch(71.5% 0.143 215.221);
-    --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-fuchsia-600: oklch(59.1% 0.293 322.896);
     --color-pink-600: oklch(59.2% 0.249 0.584);
     --color-white: #fff;
@@ -31,6 +29,8 @@
     --color-brand-blue: #60aeea;
     --color-brand-dark: #10426d;
     --color-brand-gray: #f3f6f9;
+    --color-brand-rosario: #da0921;
+    --color-brand-bg-rosario: #dadae5;
   }
 }
 @layer base {
@@ -213,11 +213,20 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
+  .mr-2 {
+    margin-right: calc(var(--spacing) * 2);
+  }
   .flex {
     display: flex;
   }
   .grid {
     display: grid;
+  }
+  .inline-block {
+    display: inline-block;
+  }
+  .h-\[600px\] {
+    height: 600px;
   }
   .min-h-screen {
     min-height: 100vh;
@@ -228,8 +237,14 @@
   .max-w-96 {
     max-width: calc(var(--spacing) * 96);
   }
+  .max-w-\[350px\] {
+    max-width: 350px;
+  }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .flex-col {
+    flex-direction: column;
   }
   .items-center {
     align-items: center;
@@ -252,6 +267,9 @@
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
+  .bg-brand-bg-rosario {
+    background-color: var(--color-brand-bg-rosario);
+  }
   .bg-brand-blue {
     background-color: var(--color-brand-blue);
   }
@@ -260,6 +278,9 @@
   }
   .bg-brand-light {
     background-color: var(--color-brand-light);
+  }
+  .bg-brand-rosario {
+    background-color: var(--color-brand-rosario);
   }
   .bg-gradient-to-r {
     --tw-gradient-position: to right in oklab;
@@ -284,6 +305,9 @@
   }
   .py-12 {
     padding-block: calc(var(--spacing) * 12);
+  }
+  .text-center {
+    text-align: center;
   }
   .text-7xl {
     font-size: var(--text-7xl);
@@ -313,6 +337,9 @@
   }
   .text-brand-gray {
     color: var(--color-brand-gray);
+  }
+  .text-brand-rosario {
+    color: var(--color-brand-rosario);
   }
   .text-white {
     color: var(--color-white);
