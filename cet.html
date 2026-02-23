@@ -4,9 +4,91 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./src/css/output.css" rel="stylesheet" />
+    <style>
+      .hero {
+        width: 100%;
+        max-width: 980px;
+        text-align: center;
+      }
+
+      .hero-kicker {
+        font-size: clamp(2.2rem, 5.4vw, 4.6rem);
+        line-height: 1.02;
+        font-weight: 400;
+        color: var(--color-brand-black);
+        margin: 0;
+      }
+
+      .hero-title {
+        font-size: clamp(2.3rem, 5.8vw, 5rem);
+        line-height: 1.02;
+        font-weight: 400;
+        color: var(--color-brand-black);
+        margin: 0.15rem 0 0;
+      }
+
+      .hero-title-emphasis {
+        font-weight: 800;
+        color: var(--color-brand-dark);
+      }
+
+      .hero-divider {
+        width: min(360px, 72vw);
+        height: 2px;
+        background: var(--color-brand-dark);
+        margin: 1.2rem auto 2rem;
+      }
+
+      .hero-copy {
+        max-width: 720px;
+        margin: 0 auto;
+        font-size: clamp(1.1rem, 2.1vw, 1.5rem);
+        line-height: 1.45;
+        color: var(--color-brand-black);
+      }
+
+      .hero-actions {
+        margin-top: 2.2rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .hero-btn {
+        border: 1px solid var(--color-brand-black);
+        padding: 0.85rem 1.8rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        line-height: 1;
+        min-width: 250px;
+      }
+
+      .hero-btn-primary {
+        background: var(--color-brand-black);
+        color: var(--color-brand-light);
+      }
+
+      .hero-btn-secondary {
+        background: transparent;
+        color: var(--color-brand-black);
+      }
+    </style>
   </head>
-  <body class="bg-brand-gray">
-    <div class="relative">
+  <body class="bg-brand-gray min-h-screen relative text-brand-black">
+    <div class="min-h-screen flex items-center justify-center px-4">
+      <main class="hero">
+        <h1 class="hero-kicker">Explora tu</h1>
+        <h2 class="hero-title"><span class="hero-title-emphasis">Afinidad</span> Electoral</h2>
+        <div class="hero-divider"></div>
+
+        <p class="hero-copy">
+          Este es un ejercicio basado y simulado en dos planes de gobierno, de un candidato de derecha o de izquierda, para que la gente pueda formular
+          preguntas y comparar con las respuestas del usuario.
+        </p>
+      </main>
+    </div>
+    <div class="fixed bottom-4 right-4 z-50">
       <elevenlabs-convai agent-id="agent_6401kc7mxnm6fx8t5fbsyxqkf9vq"></elevenlabs-convai>
       <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
     </div>
